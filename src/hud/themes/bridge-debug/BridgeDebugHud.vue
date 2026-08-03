@@ -177,7 +177,6 @@ function cacheModel(model: ModelOptionSnapshot): void {
 }
 
 async function hideLab(): Promise<void> {
-  effects.pageVisible.value = false
   await context.hideHud()
 }
 
