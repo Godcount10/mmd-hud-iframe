@@ -1,0 +1,35 @@
+{
+  "name": "mmd-hud-iframe",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MMD Parent Bridge Host 与独立 iframe Vue HUD",
+  "scripts": {
+    "dev": "vite --config vite.frame.config.ts",
+    "dev:host": "vite --config vite.host-dev.config.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json && vue-tsc --noEmit -p tsconfig.node.json",
+    "build:host": "vite build --config vite.host.config.ts",
+    "build:frame": "vite build --config vite.frame.config.ts",
+    "build": "npm run typecheck && npm run build:host && npm run build:frame"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "motion": "^12.43.0",
+    "ogl": "^1.0.11",
+    "postprocessing": "^6.39.4",
+    "three": "^0.178.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/three": "^0.178.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^3.2.7",
+    "vue-tsc": "^3.3.8"
+  }
+}
