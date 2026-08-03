@@ -20,14 +20,6 @@ const secondaryText = ref('')
 const selected = ref('')
 const childSelected = ref('')
 
-watch(() => [props.action, props.snapshot.revision], () => {
-  text.value = ''
-  secondaryText.value = ''
-  selected.value = ''
-  childSelected.value = ''
-  emitPayload()
-}, { immediate: true })
-
 const selectedMessage = computed(() => props.snapshot.messages.find((item) => item.id === selected.value) ?? null)
 const selectedConversation = computed(() => props.snapshot.conversationPanel.conversations.find((item) => item.id === selected.value) ?? null)
 const selectedModelControl = computed(() => props.snapshot.modelConfiguration.controls.find((item) => item.id === selected.value) ?? null)
@@ -54,6 +46,24 @@ const options = computed(() => {
 })
 
 const childOptions = computed(() => selectedModelControl.value?.choices.map((item) => ({ value: item.id, label: item.label })) ?? [])
+
+watch(() => props.action, () => {
+  text.value = ''
+  secondaryText.value = ''
+  selected.value = ''
+  childSelected.value = ''
+  emitPayload()
+}, { immediate: true })
+
+watch(() => props.snapshot.revision, () => {
+  if (selected.value && options.value.every((option) => option.value !== selected.value)) {
+    selected.value = ''
+    childSelected.value = ''
+  } else if (childSelected.value && childOptions.value.every((option) => option.value !== childSelected.value)) {
+    childSelected.value = ''
+  }
+  emitPayload()
+})
 
 function buildPayload(): unknown {
   switch (definition.value.payloadKind) {

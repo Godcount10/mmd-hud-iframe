@@ -25,6 +25,7 @@ const props = defineProps<{
   configuration: ModelConfigurationSnapshot
   capabilities: Pick<CapabilityMap, ModelBridgeAction>
   pending: boolean
+  loading: boolean
   pendingAction: NativeAction | null
   error: string
   anchor: HTMLElement | null
@@ -56,17 +57,27 @@ function capabilityTitle(action: ModelBridgeAction, fallback: string): string {
   return props.capabilities[action].reason || fallback
 }
 
+async function waitForPanelState(readOpen: () => boolean, expected: boolean, timeoutMs = 1_000): Promise<boolean> {
+  const startedAt = performance.now()
+  while (readOpen() !== expected && performance.now() - startedAt < timeoutMs) {
+    await new Promise(resolve => window.setTimeout(resolve, 16))
+  }
+  return readOpen() === expected
+}
+
 async function finishClose(): Promise<void> {
   if (closing || props.pending) return
   closing = true
   try {
-    if (props.configuration.open && props.capabilities.closeModelConfiguration.available) {
+    if (props.configuration.open) {
       const result = await props.execute('closeModelConfiguration')
       if (!result.ok) return
+      await waitForPanelState(() => props.configuration.open, false)
     }
-    if (props.panel.open && props.capabilities.closeModelSettings.available) {
+    if (props.panel.open || props.capabilities.closeModelSettings.available || props.loading) {
       const result = await props.execute('closeModelSettings')
       if (!result.ok) return
+      await waitForPanelState(() => props.panel.open, false)
     }
     emit('close')
     await nextTick()
@@ -143,11 +154,15 @@ watch(() => props.panel.models.length, length => {
 })
 
 onBeforeUnmount(() => {
-  if (props.configuration.open && props.capabilities.closeModelConfiguration.available) {
-    void props.execute('closeModelConfiguration').catch(() => undefined)
-  } else if (props.panel.open && props.capabilities.closeModelSettings.available) {
-    void props.execute('closeModelSettings').catch(() => undefined)
-  }
+  void (async () => {
+    if (props.configuration.open && props.capabilities.closeModelConfiguration.available) {
+      await props.execute('closeModelConfiguration').catch(() => undefined)
+      await waitForPanelState(() => props.configuration.open, false)
+    }
+    if (props.panel.open && props.capabilities.closeModelSettings.available) {
+      await props.execute('closeModelSettings').catch(() => undefined)
+    }
+  })()
 })
 </script>
 
@@ -173,6 +188,7 @@ onBeforeUnmount(() => {
 
       <p v-if="error" class="model-switcher__error" role="alert">{{ error }}</p>
       <p v-if="pending" class="model-switcher__pending" role="status">{{ pendingAction || 'model bridge' }} 正在执行…</p>
+      <p v-else-if="loading" class="model-switcher__pending" role="status">正在同步 MMD 原生模型列表…</p>
 
       <template v-if="configuration.open">
         <div class="model-configuration__summary">

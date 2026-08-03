@@ -114,7 +114,9 @@ async function openModelSwitcher(): Promise<ActionResult> {
       modelError.value = result.error?.message || '无法打开 MMD 原生模型面板。'
       return result
     }
-    if (props.modelPanel.models.length) modelLoading.value = false
+    const panel = result.data as ModelPanelSnapshot | undefined
+    if (panel?.open && panel.models.length) modelLoading.value = false
+    else if (props.modelPanel.models.length) modelLoading.value = false
     else {
       if (modelLoadTimer) clearTimeout(modelLoadTimer)
       modelLoadTimer = setTimeout(() => {
@@ -193,7 +195,8 @@ onBeforeUnmount(() => {
       :panel="modelPanel"
       :configuration="modelConfiguration"
       :capabilities="modelCapabilities"
-      :pending="modelPending || modelLoading"
+      :pending="modelPending"
+      :loading="modelLoading"
       :pending-action="modelPendingAction"
       :error="modelError"
       :anchor="modelButton"

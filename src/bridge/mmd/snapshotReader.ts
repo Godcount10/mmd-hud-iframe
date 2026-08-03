@@ -29,6 +29,7 @@ import {
   findModelConfiguration,
   findModelEntry,
   findModelPanel,
+  findModelPanelClose,
   readModelConfiguration,
   readModelPanel,
 } from './modelPanels'
@@ -231,10 +232,12 @@ function deriveCapabilities(
   capabilities.refreshConversation = headerActions.refresh
     ? { available: true }
     : { available: false, reason: headerActionReason }
-  capabilities.openModelSettings = modelEntry
-    ? { available: true }
-    : { available: false, reason: '没有找到带切换图标的原生模型入口' }
-  capabilities.closeModelSettings = modelPanel?.querySelector(MMD_SELECTORS.shareCloseButton)
+  capabilities.openModelSettings = modelPanel
+    ? { available: false, reason: '原生模型选择界面已经打开' }
+    : modelEntry
+      ? { available: true }
+      : { available: false, reason: '没有找到带切换图标的原生模型入口' }
+  capabilities.closeModelSettings = modelPanel && findModelPanelClose(modelPanel)
     ? { available: true }
     : { available: false, reason: modelPanel ? '原生模型选择界面关闭按钮尚未加载' : '原生模型选择界面尚未打开' }
   capabilities.selectModelFilter = modelPanel?.querySelector(MMD_SELECTORS.modelFilters)

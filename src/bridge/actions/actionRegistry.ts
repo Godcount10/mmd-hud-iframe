@@ -41,6 +41,7 @@ import {
   findModelFilter,
   findModelItem,
   findModelPanel,
+  findModelPanelClose,
   findModelSettingTarget,
   readModelConfiguration,
   readModelOptions,
@@ -1016,6 +1017,14 @@ const handlers: Partial<Record<NativeAction, ActionHandler>> = {
 
   async openModelSettings(_payload, context) {
     const action: NativeAction = 'openModelSettings'
+    const existingPanel = findModelPanel(context.document)
+    if (existingPanel) {
+      const snapshot = await waitForModelRows(existingPanel, 4_000, context.signal)
+      return snapshot.open
+        ? { ok: true, action, data: snapshot }
+        : failure(action, 'NOT_AVAILABLE', '模型选择界面在模型列表加载前已关闭')
+    }
+
     const startedAt = performance.now()
     const entry = findModelEntry(context.document)
     if (!entry) return failure(action, 'NOT_FOUND', '没有找到带切换图标的原生模型入口')
@@ -1038,8 +1047,9 @@ const handlers: Partial<Record<NativeAction, ActionHandler>> = {
   async closeModelSettings(_payload, context) {
     const action: NativeAction = 'closeModelSettings'
     const panel = findModelPanel(context.document)
-    const close = panel ? findPanelClose(panel) : null
-    if (!panel || !close || !isVisible(close)) {
+    if (!panel) return { ok: true, action, data: { alreadyClosed: true } }
+    const close = findModelPanelClose(panel)
+    if (!close || !isVisible(close)) {
       return failure(action, 'NOT_FOUND', '没有找到模型选择界面的关闭按钮')
     }
     dispatchPointerClick(close)

@@ -44,6 +44,8 @@ const labRoot = ref<HTMLElement | null>(null)
 const surfaceRoot = ref<HTMLElement | null>(null)
 const surfaceTabs = ref<HTMLElement | null>(null)
 const confirmOpen = ref(false)
+const confirmedPayload = ref<unknown>(undefined)
+const confirmedRevision = ref<number | null>(null)
 const confirmationMode = ref<'execute' | 'commit-token'>('execute')
 const fullExportConfirm = ref(false)
 const baseRevision = ref<number | null>(null)
@@ -215,6 +217,8 @@ function runRequested(): void {
   if (!canExecute.value) return
   if (definition.value.confirm) {
     confirmationMode.value = 'execute'
+    confirmedPayload.value = payload.value === undefined ? undefined : structuredClone(payload.value)
+    confirmedRevision.value = context.snapshot.value.revision
     confirmOpen.value = true
   } else {
     void executeSelected()
@@ -263,10 +267,14 @@ function readConfirmation(result: ActionResult): void {
 }
 
 async function executeSelected(): Promise<void> {
-  confirmOpen.value = false
   const actualPayload = selectedAction.value === 'deleteConversation'
     ? executor.pendingConfirmation.value?.payload
-    : payload.value
+    : confirmationMode.value === 'execute' && confirmedRevision.value !== null
+      ? confirmedPayload.value
+      : payload.value
+  confirmOpen.value = false
+  confirmedPayload.value = undefined
+  confirmedRevision.value = null
   const result = await executor.execute(selectedAction.value, actualPayload)
   readConfirmation(result)
   rightTab.value = 'result'
@@ -278,6 +286,8 @@ function requestTokenCommit(): void {
   selectedAction.value = pending.action
   payload.value = pending.payload
   confirmationMode.value = 'commit-token'
+  confirmedPayload.value = structuredClone(pending.payload)
+  confirmedRevision.value = context.snapshot.value.revision
   confirmOpen.value = true
 }
 
@@ -286,6 +296,8 @@ async function confirmSafety(): Promise<void> {
     const pending = executor.pendingConfirmation.value
     if (!pending) return
     confirmOpen.value = false
+    confirmedPayload.value = undefined
+    confirmedRevision.value = null
     const result = await executor.execute(pending.action, pending.payload)
     if (result.ok) executor.clearConfirmation()
     rightTab.value = 'result'
@@ -559,11 +571,11 @@ function exportLab(full = false): void {
       :open="confirmOpen"
       :action="selectedAction"
       :label="definition.label"
-      :payload="confirmationMode === 'commit-token' ? executor.pendingConfirmation.value?.payload : payload"
-      :target-revision="context.snapshot.value.revision"
+      :payload="confirmedRevision !== null ? confirmedPayload : (confirmationMode === 'commit-token' ? executor.pendingConfirmation.value?.payload : payload)"
+      :target-revision="confirmedRevision ?? context.snapshot.value.revision"
       :destructive="definition.effect === 'destructive'"
       @confirm="confirmSafety"
-      @cancel="confirmOpen = false"
+      @cancel="confirmOpen = false; confirmedPayload = undefined; confirmedRevision = null"
     />
 
     <div v-if="fullExportConfirm" class="safety-backdrop" @click.self="fullExportConfirm = false">

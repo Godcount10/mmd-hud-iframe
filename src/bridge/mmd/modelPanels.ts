@@ -47,6 +47,11 @@ export function findModelPanel(document: Document): HTMLElement | null {
     .find(isVisible) ?? null
 }
 
+export function findModelPanelClose(panel: HTMLElement): HTMLElement | null {
+  const popupContent = panel.closest<HTMLElement>('.u-popup__content') ?? panel.parentElement
+  return popupContent?.querySelector<HTMLElement>(MMD_SELECTORS.shareCloseButton) ?? null
+}
+
 export function findModelConfiguration(document: Document): HTMLElement | null {
   return [...document.querySelectorAll<HTMLElement>(MMD_SELECTORS.modelConfiguration)]
     .find(isVisible) ?? null

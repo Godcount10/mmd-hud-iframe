@@ -183,7 +183,7 @@ export class MmdNativeBridge implements NativeBridge {
     if (result.ok && (action === 'submitEditMessage' || action === 'cancelEditMessage')) {
       this.editingMessageId = null
     }
-    this.refresh()
+    this.refreshNow()
     return result as ActionResult<T>
   }
 
