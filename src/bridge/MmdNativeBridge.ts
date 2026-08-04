@@ -198,7 +198,7 @@ export class MmdNativeBridge implements NativeBridge {
       subtree: true,
       childList: true,
       attributes: true,
-      attributeFilter: ['class', 'style', 'disabled', 'readonly', 'aria-disabled'],
+      attributeFilter: ['class', 'style', 'src', 'disabled', 'readonly', 'aria-disabled'],
     })
   }
 

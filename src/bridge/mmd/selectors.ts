@@ -198,7 +198,7 @@ export const MMD_AI_LATEST_ACTION_COUNT = 3
 export const MMD_HEADER_ACTION_ICONS = {
   comments: ['ico_comment_dark.png'],
   share: ['ico_share2_dark.png'],
-  favorite: ['ico_collect_dark.png'],
+  favorite: ['ico_collect_dark.png', 'ico_collect_sel_dark.png'],
   refresh: ['ico_refresh2_dark.png'],
 } as const
 
