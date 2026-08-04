@@ -3,6 +3,7 @@ import { MAX_ACTION_RUNS } from './useActionExecutor'
 import { MAX_TIMELINE } from './useBridgeLab'
 import { MAX_SNAPSHOTS } from './useSnapshotHistory'
 import { redactForExport } from '../utils/redactExport'
+import { cloneDebugValue } from '../utils/cloneDebugValue'
 import type { ActionRunRecord, BridgeDebugExport, BridgeEventRecord, SnapshotRecord } from '../types'
 
 export function buildBridgeDebugExport(input: {
@@ -32,9 +33,9 @@ export function buildBridgeDebugExport(input: {
       registered: manifest.filter((item) => item.support === 'registered').length,
       contractOnly: manifest.filter((item) => item.support === 'contract-only').length,
     },
-    snapshots: structuredClone(input.snapshots),
-    events: structuredClone(input.events),
-    actionRuns: structuredClone(input.actionRuns),
+    snapshots: cloneDebugValue(input.snapshots),
+    events: cloneDebugValue(input.events),
+    actionRuns: cloneDebugValue(input.actionRuns),
   }
   return input.full ? value : redactForExport(value) as BridgeDebugExport
 }
