@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { gsap } from 'gsap'
-import { ALL_NATIVE_ACTIONS, type ActionResult, type DeleteConversationResult, type DeleteMessageResult, type ModelOptionSnapshot, type NativeAction } from '../../../contracts'
+import { ALL_NATIVE_ACTIONS, type ActionResult, type ModelOptionSnapshot, type NativeAction } from '../../../contracts'
 import { ACTION_DEBUG_MANIFEST } from './actionDebugManifest'
 import { DEBUG_WORKFLOWS } from './workflowManifest'
 import { useBridgeLab } from './composables/useBridgeLab'
@@ -9,6 +9,8 @@ import { useActionExecutor } from './composables/useActionExecutor'
 import { useSnapshotHistory } from './composables/useSnapshotHistory'
 import { useEffectSettings } from './composables/useEffectSettings'
 import { buildBridgeDebugExport, downloadBridgeDebugExport } from './composables/useLabExport'
+import { cloneDebugValue } from './utils/cloneDebugValue'
+import { pendingConfirmationFromResult } from './utils/pendingConfirmation'
 import { diffJson } from './utils/jsonDiff'
 import JsonTree from './components/JsonTree.vue'
 import PayloadForm from './components/PayloadForm.vue'
@@ -72,6 +74,14 @@ const canExecute = computed(() => definition.value.support === 'registered'
   && !executor.pending.value
   && (definition.value.payloadKind === 'none' || payload.value !== undefined)
   && (selectedAction.value !== 'deleteConversation' || executor.pendingConfirmation.value?.kind === 'conversation-delete'))
+
+const canExecuteReason = computed(() => {
+  if (definition.value.support === 'contract-only') return '没有 handler，不允许执行'
+  if (selectedAction.value === 'deleteConversation' && executor.pendingConfirmation.value?.kind !== 'conversation-delete') {
+    return '请先执行“请求删除会话”，等待 Bridge 生成确认 token'
+  }
+  return selectedCapability.value.reason || '请选择完整的当前快照 payload'
+})
 
 const latestRun = computed(() => executor.actionRuns.value[0] ?? null)
 const baseSnapshot = computed(() => snapshots.value.find((item) => item.revision === baseRevision.value)?.snapshot ?? null)
@@ -216,7 +226,7 @@ function runRequested(): void {
   if (!canExecute.value) return
   if (definition.value.confirm) {
     confirmationMode.value = 'execute'
-    confirmedPayload.value = payload.value === undefined ? undefined : structuredClone(payload.value)
+    confirmedPayload.value = payload.value === undefined ? undefined : cloneDebugValue(payload.value)
     confirmedRevision.value = context.snapshot.value.revision
     confirmOpen.value = true
   } else {
@@ -225,44 +235,8 @@ function runRequested(): void {
 }
 
 function readConfirmation(result: ActionResult): void {
-  if (!result.ok || !result.data || typeof result.data !== 'object') return
-
-  if (selectedAction.value === 'deleteMessage') {
-    const data = result.data as DeleteMessageResult
-    if (data.phase !== 'confirmation-required') return
-    const confirmation = data.confirmation
-    executor.setConfirmation({
-      kind: 'message-delete',
-      action: 'deleteMessage',
-      expiresAt: Date.now() + 30_000,
-      prompt: confirmation.prompt,
-      targetLabel: confirmation.messageId,
-      payload: {
-        messageId: confirmation.messageId,
-        confirmationToken: confirmation.confirmationToken,
-      },
-    })
-    return
-  }
-
-  if (selectedAction.value === 'deleteConversation') {
-    const data = result.data as DeleteConversationResult
-    if (data.phase !== 'confirmation-required') return
-    const confirmation = data.confirmation
-    executor.setConfirmation({
-      kind: 'conversation-delete',
-      action: 'deleteConversation',
-      expiresAt: Date.now() + 30_000,
-      prompt: confirmation.prompt,
-      targetLabel: confirmation.conversationId,
-      payload: {
-        conversationId: confirmation.conversationId,
-        fingerprint: confirmation.fingerprint,
-        index: confirmation.index,
-        confirmationToken: confirmation.confirmationToken,
-      },
-    })
-  }
+  const confirmation = pendingConfirmationFromResult(result)
+  if (confirmation) executor.setConfirmation(confirmation)
 }
 
 async function executeSelected(): Promise<void> {
@@ -285,7 +259,7 @@ function requestTokenCommit(): void {
   selectedAction.value = pending.action
   payload.value = pending.payload
   confirmationMode.value = 'commit-token'
-  confirmedPayload.value = structuredClone(pending.payload)
+  confirmedPayload.value = cloneDebugValue(pending.payload)
   confirmedRevision.value = context.snapshot.value.revision
   confirmOpen.value = true
 }
@@ -496,7 +470,7 @@ function exportLab(full = false): void {
           <button class="lab-button lab-button--run" type="button" :disabled="!canExecute" @click="runRequested">
             {{ executor.pending.value ? '执行中…' : '执行 Bridge Action' }}
           </button>
-          <small v-if="!canExecute">{{ definition.support === 'contract-only' ? '没有 handler，不允许执行' : (selectedCapability.reason || '请选择完整的当前快照 payload') }}</small>
+          <small v-if="!canExecute">{{ canExecuteReason }}</small>
         </footer>
       </section>
 

@@ -5,6 +5,7 @@ import { FrameController } from './FrameController'
 
 export interface IframeHostConfig {
   frameScriptUrl?: string
+  frameScriptSource?: string
   theme?: HudThemeId
 }
 
@@ -25,7 +26,8 @@ export class HostApp {
   private destroyed = false
 
   constructor(
-    private readonly frameScriptUrl: URL,
+    private readonly frameScriptUrl: URL | undefined,
+    private readonly frameScriptSource: string | undefined,
     private readonly theme: HudThemeId,
     private readonly buildId: string,
     private readonly onDestroy: () => void,
@@ -33,6 +35,7 @@ export class HostApp {
     this.bridge = new MmdNativeBridge(document)
     this.frame = new FrameController({
       frameScriptUrl,
+      frameScriptSource,
       theme,
       buildId,
       gateway: this.bridge,
@@ -81,11 +84,12 @@ export class HostApp {
   }
 }
 
-export function resolveFrameScriptUrl(config: IframeHostConfig | undefined): URL {
+export function resolveFrameScriptUrl(config: IframeHostConfig | undefined): URL | undefined {
+  if (config?.frameScriptSource) return undefined
   if (config?.frameScriptUrl) return new URL(config.frameScriptUrl, window.location.href)
   const script = document.currentScript
   if (!(script instanceof HTMLScriptElement) || !script.src) {
-    throw new Error('无法推导 Frame 脚本 URL；请设置 window.__MMD_HUD_IFRAME_CONFIG__.frameScriptUrl')
+    throw new Error('无法推导 Frame 脚本 URL；请设置 frameScriptUrl 或 frameScriptSource')
   }
   return new URL('../frame/mmd-hud-iframe-frame.js', script.src)
 }
@@ -98,6 +102,6 @@ export function assertFrameScriptUrlAllowed(frameScriptUrl: URL): void {
   const localDevelopment = import.meta.env.DEV
     && frameScriptUrl.protocol === 'http:'
     && (frameScriptUrl.hostname === '127.0.0.1' || frameScriptUrl.hostname === 'localhost')
-  if (frameScriptUrl.protocol === 'https:' || localDevelopment) return
+  if (frameScriptUrl.protocol === 'https:' || frameScriptUrl.protocol === 'blob:' || localDevelopment) return
   throw new Error('Frame 脚本必须使用 HTTPS；本地开发仅允许 loopback HTTP')
 }

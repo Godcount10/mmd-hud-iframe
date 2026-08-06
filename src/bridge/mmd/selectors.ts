@@ -94,7 +94,7 @@ export const MMD_SELECTORS = {
   conversationDelete: '.delete-icon',
   conversationCreate: ':scope > .bottom > .btn',
   conversationRenameDialog: '.confirm-edit-scope',
-  conversationRenameTitle: '.confirm-title',
+  conversationRenameTitle: '.confirm-edit-title',
   conversationRenameInput: 'input.uni-input-input',
   conversationRenameCancel: '.cancel-btn',
   conversationRenameOk: '.ok-btn',

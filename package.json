@@ -12,6 +12,8 @@
     "typecheck": "vue-tsc --noEmit -p tsconfig.app.json && vue-tsc --noEmit -p tsconfig.node.json",
     "build:host": "vite build --config vite.host.config.ts",
     "build:frame": "vite build --config vite.frame.config.ts",
+    "build:inline:rules": "node scripts/build-inline.mjs",
+    "build:inline": "npm run typecheck && npm run build:host && npm run build:frame && npm run build:inline:rules",
     "build": "npm run typecheck && npm run build:host && npm run build:frame"
   },
   "dependencies": {

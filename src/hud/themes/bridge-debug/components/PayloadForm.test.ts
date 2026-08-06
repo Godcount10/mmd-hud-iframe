@@ -4,6 +4,12 @@ import { createTestSnapshot } from '../../../../../tests/helpers/snapshot'
 import PayloadForm from './PayloadForm.vue'
 
 const MODEL_ID = 'model-stable'
+const DELETE_PAYLOAD = {
+  conversationId: 'conversation-2',
+  fingerprint: 'fingerprint-2',
+  index: 2,
+  confirmationToken: 'token-2',
+}
 
 function modelSnapshot(revision: number, includeModel = true) {
   const snapshot = createTestSnapshot(revision)
@@ -42,5 +48,30 @@ describe('PayloadForm snapshot updates', () => {
     await nextTick()
 
     expect(wrapper.emitted('payload')?.at(-1)?.[0]).toBeUndefined()
+  })
+
+  it('does not render a target selector for deleteConversation without a token', () => {
+    const wrapper = mount(PayloadForm, {
+      props: { action: 'deleteConversation', snapshot: createTestSnapshot() },
+    })
+
+    expect(wrapper.find('select').exists()).toBe(false)
+    expect(wrapper.text()).toContain('请先执行“请求删除会话”')
+    expect(wrapper.emitted('payload')?.at(-1)?.[0]).toBeUndefined()
+  })
+
+  it('uses only the pending token payload for deleteConversation', async () => {
+    const wrapper = mount(PayloadForm, {
+      props: {
+        action: 'deleteConversation',
+        snapshot: createTestSnapshot(),
+        confirmPayload: DELETE_PAYLOAD,
+      },
+    })
+
+    expect(wrapper.find('select').exists()).toBe(false)
+    expect(wrapper.text()).toContain('不允许重新选择目标')
+    expect(wrapper.text()).toContain('conversation-2')
+    expect(wrapper.emitted('payload')?.at(-1)?.[0]).toEqual(DELETE_PAYLOAD)
   })
 })

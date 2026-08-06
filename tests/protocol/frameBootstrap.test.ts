@@ -1,4 +1,5 @@
 import {
+  createEmbeddedFrameSrcdoc,
   createFrameSrcdoc,
   decodeFrameBootstrap,
   encodeFrameBootstrap,
@@ -30,6 +31,16 @@ describe('srcdoc Frame bootstrap', () => {
     expect(srcdoc).toContain('type="module"')
     expect(srcdoc).toContain('cdn.jsdelivr.net')
     expect(srcdoc).not.toContain('bootstrap-test')
+  })
+
+  it('rejects blob Frame URLs because inline bundles use embedded srcdoc', () => {
+    expect(() => createFrameSrcdoc(new URL('blob:https://mmd.example/frame-inline'))).toThrow(/HTTPS/)
+  })
+
+  it('creates an inline Frame srcdoc without a remote script URL', () => {
+    const srcdoc = createEmbeddedFrameSrcdoc('window.__inline_test__ = true;')
+    expect(srcdoc).toContain('<script>window.__inline_test__ = true;</script>')
+    expect(srcdoc).not.toContain('src="')
   })
 
   it('rejects insecure non-loopback Frame scripts', () => {

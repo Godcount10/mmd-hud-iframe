@@ -19,9 +19,9 @@ async function boot(): Promise<void> {
   const config = window.__MMD_HUD_IFRAME_CONFIG__
   const frameScriptUrl = resolveFrameScriptUrl(config)
   const theme = resolveTheme(config)
-  assertFrameScriptUrlAllowed(frameScriptUrl)
+  if (frameScriptUrl) assertFrameScriptUrlAllowed(frameScriptUrl)
 
-  const app = new HostApp(frameScriptUrl, theme, __MMD_HUD_BUILD_ID__, () => {
+  const app = new HostApp(frameScriptUrl, config?.frameScriptSource, theme, __MMD_HUD_BUILD_ID__, () => {
     if (window[INSTANCE_KEY] === api) delete window[INSTANCE_KEY]
   })
   const api = app.getApi()

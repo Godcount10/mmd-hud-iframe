@@ -52,6 +52,26 @@ export function createFrameSrcdoc(frameScriptUrl: URL): string {
 </html>`
 }
 
+export function createEmbeddedFrameSrcdoc(frameScriptSource: string): string {
+  if (!frameScriptSource || frameScriptSource.length > 10_000_000) {
+    throw new Error('内嵌 Frame 脚本为空或超过 10 MB 限制')
+  }
+  const scriptSource = escapeInlineScript(frameScriptSource)
+  return `<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>MMD iframe HUD</title>
+</head>
+<body style="margin:0;background:#050a0f">
+<div id="app"></div>
+<script>${scriptSource}</script>
+</body>
+</html>`
+}
+
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.length > 0 && value.length <= 1_024
 }
@@ -68,6 +88,13 @@ function isHttpOrigin(value: unknown): value is string {
 
 function isLoopbackHttp(url: URL): boolean {
   return url.protocol === 'http:' && (url.hostname === '127.0.0.1' || url.hostname === 'localhost')
+}
+
+function escapeInlineScript(value: string): string {
+  return value
+    .replaceAll('</script', '<\\/script')
+    .replaceAll(' ', '\\u2028')
+    .replaceAll(' ', '\\u2029')
 }
 
 function escapeHtmlAttribute(value: string): string {

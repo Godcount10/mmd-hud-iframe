@@ -23,6 +23,10 @@ const childSelected = ref('')
 const selectedMessage = computed(() => props.snapshot.messages.find((item) => item.id === selected.value) ?? null)
 const selectedConversation = computed(() => props.snapshot.conversationPanel.conversations.find((item) => item.id === selected.value) ?? null)
 const selectedModelControl = computed(() => props.snapshot.modelConfiguration.controls.find((item) => item.id === selected.value) ?? null)
+const confirmationPayload = computed(() => {
+  const value = props.confirmPayload
+  return value && typeof value === 'object' ? value as Record<string, unknown> : null
+})
 
 const options = computed(() => {
   switch (definition.value.payloadKind) {
@@ -35,8 +39,7 @@ const options = computed(() => {
       .filter((item) => item.available && !item.destructive)
       .map((item) => ({ value: item.id, label: `${item.label} · ${item.kind}` }))
     case 'conversation':
-    case 'conversation-title':
-    case 'conversation-delete': return props.snapshot.conversationPanel.conversations.map((item) => ({ value: item.id, label: `${item.index} · ${item.title}${item.current ? ' · CURRENT' : ''}` }))
+    case 'conversation-title': return props.snapshot.conversationPanel.conversations.map((item) => ({ value: item.id, label: `${item.index} · ${item.title}${item.current ? ' · CURRENT' : ''}` }))
     case 'persona-mode': return props.snapshot.personaPanel.modes.map((item) => ({ value: item.id, label: item.label, disabled: item.disabled }))
     case 'persona-gender': return props.snapshot.personaPanel.genderChoices.map((item) => ({ value: item.id, label: item.label, disabled: item.disabled }))
     case 'supplement-choice': return props.snapshot.supplementPanel.picker.choices.map((item) => ({ value: item.id, label: item.label }))
@@ -103,6 +106,20 @@ function emitPayload(): void {
   <div class="payload-form" @input="emitPayload" @change="emitPayload">
     <div v-if="definition.payloadKind === 'contract-only'" class="payload-form__notice">
       此动作没有正式 payload contract，也没有 handler。调试台不会猜测或强制执行。
+    </div>
+
+    <div v-if="definition.payloadKind === 'conversation-delete'" class="payload-form__notice">
+      <template v-if="confirmationPayload">
+        此动作只提交“请求删除会话”生成的内存 token，不允许重新选择目标。
+        <dl class="reference-card">
+          <dt>会话 ID</dt><dd>{{ confirmationPayload.conversationId }}</dd>
+          <dt>index</dt><dd>{{ confirmationPayload.index }}</dd>
+          <dt>fingerprint</dt><dd>{{ confirmationPayload.fingerprint }}</dd>
+        </dl>
+      </template>
+      <template v-else>
+        请先执行“请求删除会话”，并在原生确认框出现后通过 token 面板提交。
+      </template>
     </div>
 
     <label v-else-if="options.length" class="lab-field">

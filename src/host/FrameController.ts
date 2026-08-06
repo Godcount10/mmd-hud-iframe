@@ -6,6 +6,7 @@ import {
   IFRAME_PROTOCOL_VERSION,
   createBootstrapId,
   createChannelId,
+  createEmbeddedFrameSrcdoc,
   createFrameSrcdoc,
   encodeFrameBootstrap,
   type HostHandshake,
@@ -16,7 +17,8 @@ import { HostSession } from './HostSession'
 import type { NativeGateway } from './NativeGateway'
 
 interface FrameControllerOptions {
-  frameScriptUrl: URL
+  frameScriptUrl?: URL
+  frameScriptSource?: string
   theme: HudThemeId
   buildId: string
   gateway: NativeGateway
@@ -33,6 +35,9 @@ export class FrameController {
   private destroyed = false
 
   constructor(private readonly options: FrameControllerOptions) {
+    if (!options.frameScriptSource && !options.frameScriptUrl) {
+      throw new Error('缺少 Frame 脚本 URL 或内嵌源码')
+    }
     this.element = document.createElement('div')
     this.element.id = 'mmd-hud-iframe-host'
     this.element.style.cssText = 'position:fixed;inset:0;z-index:2147483646;pointer-events:none'
@@ -60,7 +65,7 @@ export class FrameController {
   }
 
   getFrameScriptUrl(): string {
-    return this.options.frameScriptUrl.href
+    return this.options.frameScriptUrl?.href ?? 'inline:embedded-frame'
   }
 
   hide = (): void => {
@@ -106,7 +111,9 @@ export class FrameController {
       parentOrigin: window.location.origin,
       theme: this.options.theme,
     })
-    this.iframe.srcdoc = createFrameSrcdoc(this.options.frameScriptUrl)
+    this.iframe.srcdoc = this.options.frameScriptSource
+      ? createEmbeddedFrameSrcdoc(this.options.frameScriptSource)
+      : createFrameSrcdoc(this.options.frameScriptUrl!)
   }
 
   private handleLoad = (): void => {

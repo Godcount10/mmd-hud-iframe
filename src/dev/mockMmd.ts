@@ -378,7 +378,7 @@ function openMockConversationRename(root: HTMLElement, item: HTMLElement): void 
   const popup = document.createElement('div')
   popup.className = 'u-popup__content'
   const title = item.querySelector<HTMLElement>('.title-scope > uni-view')
-  popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><div class="confirm-bottom"><button class="cancel-btn" type="button">取消</button><button class="ok-btn" type="button">确定</button></div></div>`
+  popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-edit-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><div class="confirm-edit-bottom"><button class="cancel-btn" type="button">取消</button><button class="ok-btn" type="button">确定</button></div></div>`
   const input = popup.querySelector<HTMLInputElement>('input.uni-input-input')!
   input.value = title?.textContent ?? ''
   popup.querySelector<HTMLElement>('.cancel-btn')?.addEventListener('click', () => popup.remove())

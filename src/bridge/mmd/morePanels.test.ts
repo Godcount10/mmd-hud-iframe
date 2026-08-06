@@ -51,7 +51,7 @@ function appendRenameDialog(
   onCancel?: () => void,
 ): HTMLElement {
   const popup = document.createElement('div')
-  popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><button class="cancel-btn">取消</button><button class="ok-btn">确定</button></div>`
+  popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-edit-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><button class="cancel-btn">取消</button><button class="ok-btn">确定</button></div>`
   const dialog = popup.querySelector<HTMLElement>('.confirm-edit-scope')!
   const input = dialog.querySelector<HTMLInputElement>('input')!
   dialog.querySelector('.cancel-btn')?.addEventListener('click', () => {
@@ -145,7 +145,7 @@ describe('native conversation mutations', () => {
     const target = readConversationPanel(document).conversations[1]!
     document.querySelectorAll<HTMLElement>('.edit-icon')[1]?.addEventListener('click', () => {
       const popup = document.createElement('div')
-      popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><button class="cancel-btn">取消</button><button class="ok-btn">确定</button></div>`
+      popup.innerHTML = `<div class="confirm-edit-scope"><div class="confirm-edit-title">聊天记录备注</div><input class="uni-input-input" maxlength="140"><button class="cancel-btn">取消</button><button class="ok-btn">确定</button></div>`
       const input = popup.querySelector<HTMLInputElement>('input')!
       popup.querySelector('.cancel-btn')?.addEventListener('click', () => popup.remove())
       popup.querySelector('.ok-btn')?.addEventListener('click', () => {
