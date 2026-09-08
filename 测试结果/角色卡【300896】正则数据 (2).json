@@ -1,0 +1,1 @@
+{"pageDepth":2,"statusbar":"功能栏","beginning":"第一句话","regex_scripts":[{"id":-1,"replaceString":"正则代码1","scriptName":"正则1名称","findRegex":"正则匹配式1"},{"id":-1,"replaceString":"正则代码2","scriptName":"正则2名称","findRegex":"正则匹配式2"}]}

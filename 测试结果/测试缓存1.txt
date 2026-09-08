@@ -1,0 +1,3019 @@
+未收藏：
+
+{
+    "label": "未收藏",
+    "documentDepth": 0,
+    "scope": {
+        "attributes": {
+            "class": "header-icon-meun",
+            "data-v-ab98568c": ""
+        },
+        "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-icon-meun\"><uni-view data-v-ab98568c=\"\" class=\"header-meun header-meun-rating\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_comment_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_comment_dark.png\" draggable=\"false\"></uni-image><!----><!----></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_share2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_share2_dark.png\" draggable=\"false\"></uni-image></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_collect_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_collect_dark.png\" draggable=\"false\"></uni-image><!----></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_refresh2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_refresh2_dark.png\" draggable=\"false\"></uni-image></uni-view></uni-view>"
+    },
+    "buttonCount": 4,
+    "buttons": [
+        {
+            "index": 0,
+            "attributes": {
+                "class": "header-meun header-meun-rating",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun",
+                "header-meun-rating"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun header-meun-rating\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_comment_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_comment_dark.png\" draggable=\"false\"></uni-image><!----><!----></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun header-meun-rating",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun",
+                        "header-meun-rating"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_comment_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_comment_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_comment_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_comment_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_comment_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 1,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_share2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_share2_dark.png\" draggable=\"false\"></uni-image></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_share2_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_share2_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_share2_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_share2_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_share2_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_collect_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_collect_dark.png\" draggable=\"false\"></uni-image><!----></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_collect_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_collect_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_collect_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_collect_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_collect_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_refresh2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_refresh2_dark.png\" draggable=\"false\"></uni-image></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_refresh2_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_refresh2_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        }
+    ],
+    "bridge": {
+        "revision": 1,
+        "capabilities": {
+            "openComments": {
+                "available": true
+            },
+            "openSharePanel": {
+                "available": true
+            },
+            "copyShareLink": {
+                "available": false,
+                "reason": "原生分享界面尚未打开"
+            },
+            "closeSharePanel": {
+                "available": false,
+                "reason": "原生分享界面尚未打开"
+            },
+            "toggleFavorite": {
+                "available": true
+            },
+            "refreshConversation": {
+                "available": true
+            }
+        }
+    }
+}
+
+已收藏：
+
+{
+    "label": "已收藏",
+    "documentDepth": 0,
+    "scope": {
+        "attributes": {
+            "class": "header-icon-meun",
+            "data-v-ab98568c": ""
+        },
+        "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-icon-meun\"><uni-view data-v-ab98568c=\"\" class=\"header-meun header-meun-rating\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_comment_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_comment_dark.png\" draggable=\"false\"></uni-image><!----><!----></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_share2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_share2_dark.png\" draggable=\"false\"></uni-image></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><!----><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_collect_sel_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_collect_sel_dark.png\" draggable=\"false\"></uni-image></uni-view><uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_refresh2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_refresh2_dark.png\" draggable=\"false\"></uni-image></uni-view></uni-view>"
+    },
+    "buttonCount": 4,
+    "buttons": [
+        {
+            "index": 0,
+            "attributes": {
+                "class": "header-meun header-meun-rating",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun",
+                "header-meun-rating"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun header-meun-rating\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_comment_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_comment_dark.png\" draggable=\"false\"></uni-image><!----><!----></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun header-meun-rating",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun",
+                        "header-meun-rating"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_comment_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_comment_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_comment_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_comment_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_comment_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 1,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_share2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_share2_dark.png\" draggable=\"false\"></uni-image></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_share2_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_share2_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_share2_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_share2_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_share2_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><!----><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_collect_sel_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_collect_sel_dark.png\" draggable=\"false\"></uni-image></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_collect_sel_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_collect_sel_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_collect_sel_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_collect_sel_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_collect_sel_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "attributes": {
+                "class": "header-meun",
+                "data-v-ab98568c": ""
+            },
+            "classList": [
+                "header-meun"
+            ],
+            "textContent": "",
+            "outerHTML": "<uni-view data-v-ab98568c=\"\" class=\"header-meun\"><uni-image data-v-ab98568c=\"\"><div style=\"background-image: url(&quot;/static/imgs/ico_refresh2_dark.png&quot;); background-position: 0% 0%; background-size: 100% 100%;\"></div><span></span><img src=\"/static/imgs/ico_refresh2_dark.png\" draggable=\"false\"></uni-image></uni-view>",
+            "nodes": [
+                {
+                    "path": ":scope",
+                    "tagName": "uni-view",
+                    "attributes": {
+                        "class": "header-meun",
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [
+                        "header-meun"
+                    ],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "flex",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1)",
+                    "tagName": "uni-image",
+                    "attributes": {
+                        "data-v-ab98568c": ""
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > div:nth-of-type(1)",
+                    "tagName": "div",
+                    "attributes": {
+                        "style": "background-image: url(\"/static/imgs/ico_refresh2_dark.png\"); background-position: 0% 0%; background-size: 100% 100%;"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "url(\"https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png\")",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "100% 100%",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > span:nth-of-type(1)",
+                    "tagName": "span",
+                    "attributes": {},
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": null,
+                        "currentSrc": null,
+                        "alt": null,
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 0,
+                        "height": 0
+                    },
+                    "style": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                },
+                {
+                    "path": ":scope > uni-image:nth-of-type(1) > img:nth-of-type(1)",
+                    "tagName": "img",
+                    "attributes": {
+                        "draggable": "false",
+                        "src": "/static/imgs/ico_refresh2_dark.png"
+                    },
+                    "classList": [],
+                    "directText": "",
+                    "propertyState": {
+                        "src": "https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png",
+                        "currentSrc": "https://www.sexyai.ai/static/imgs/ico_refresh2_dark.png",
+                        "alt": "",
+                        "title": null
+                    },
+                    "rect": {
+                        "width": 36.578125,
+                        "height": 36.578125
+                    },
+                    "style": {
+                        "display": "block",
+                        "visibility": "visible",
+                        "opacity": "0",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "normal"
+                    },
+                    "before": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    },
+                    "after": {
+                        "display": "inline",
+                        "visibility": "visible",
+                        "opacity": "1",
+                        "color": "rgb(0, 0, 0)",
+                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                        "backgroundImage": "none",
+                        "backgroundPosition": "0% 0%",
+                        "backgroundSize": "auto",
+                        "filter": "none",
+                        "transform": "none",
+                        "maskImage": "none",
+                        "webkitMaskImage": "none",
+                        "fill": "rgb(0, 0, 0)",
+                        "stroke": "none",
+                        "content": "none"
+                    }
+                }
+            ]
+        }
+    ],
+    "bridge": {
+        "revision": 2,
+        "capabilities": {
+            "openComments": {
+                "available": false,
+                "reason": "原生顶部按钮缺少可验证的图标、文字或无障碍标签，已停止以避免误点"
+            },
+            "openSharePanel": {
+                "available": false,
+                "reason": "原生顶部按钮缺少可验证的图标、文字或无障碍标签，已停止以避免误点"
+            },
+            "copyShareLink": {
+                "available": false,
+                "reason": "原生分享界面尚未打开"
+            },
+            "closeSharePanel": {
+                "available": false,
+                "reason": "原生分享界面尚未打开"
+            },
+            "toggleFavorite": {
+                "available": false,
+                "reason": "原生顶部按钮缺少可验证的图标、文字或无障碍标签，已停止以避免误点"
+            },
+            "refreshConversation": {
+                "available": false,
+                "reason": "原生顶部按钮缺少可验证的图标、文字或无障碍标签，已停止以避免误点"
+            }
+        }
+    }
+}
