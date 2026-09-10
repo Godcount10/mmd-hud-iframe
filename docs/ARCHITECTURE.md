@@ -161,6 +161,37 @@ handler 执行前检查最新 capability，执行时仍重新读取 live DOM。
 
 无 handler 动作确定性返回 NOT_AVAILABLE。
 
+### 宿主提供的 Bridge
+
+`HostApp` 先讀 `window.__MMD_HUD_NATIVE_BRIDGE__`，再退回 `MmdNativeBridge`：
+
+```ts
+window.__MMD_HUD_NATIVE_BRIDGE__ = bridge            // 已建好的 NativeBridge
+window.__MMD_HUD_NATIVE_BRIDGE__ = (document) => bridge // 或工廠，收到宿主 document
+```
+
+用途：宿主頁面本身就有應用層狀態（訊息陣列、生成狀態、模型目錄、會話列表）時，
+直接用它實作 `NativeBridge`，不必讓 Host 去猜 DOM。Snapshot、Capability、
+ActionResult、兩階段確認等契約完全不變，Frame 與 Theme 察覺不到差別。
+
+規則：
+
+- 全域存在但不是有效 `NativeBridge`（缺任一必要方法）時 `HostApp` 直接拋錯，
+  不會靜默退回 DOM 抓取——那會把整合錯誤藏在「大致能動」的 HUD 後面；
+- 提供者可實作 `getRegisteredActions()`，握手裡的 `registeredActions` 會改用它，
+  讓 bridge-debug 能區分「契約沒 handler」與「當下不可用」；
+- 這個全域刻意不放進 `__MMD_HUD_IFRAME_CONFIG__`：內嵌注入的啟動片段會整個覆寫
+  該物件；
+- `MmdNativeBridge` 仍是沒有任何 API 的頁面的預設路徑。
+
+### 單頁宿主的生命週期
+
+`FrameController` 掛載後觀察 `document.body` 的直接子節點；宿主頁面把
+`#mmd-hud-iframe-host` 從文件移除時，Host 自行 `destroy()`（關 Session、
+銷毀 Bridge 與 observer、刪除全域實例）。`boot()` 再次執行時若既有實例的元素已不在
+文件裡，視為過期：先銷毀再重新啟動。這讓沒有 `pagehide` 的單頁應用可以用一般的
+DOM 清理當作拆除訊號，不需要知道 Host 的存在。
+
 ### NativeGateway
 
 ```ts

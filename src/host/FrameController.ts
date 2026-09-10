@@ -1,4 +1,4 @@
-import { ALL_NATIVE_ACTIONS } from '../contracts'
+import { ALL_NATIVE_ACTIONS, type NativeAction } from '../contracts'
 import { REGISTERED_NATIVE_ACTIONS } from '../bridge/actions/actionRegistry'
 import {
   CONNECT_TIMEOUT_MS,
@@ -22,6 +22,8 @@ interface FrameControllerOptions {
   theme: HudThemeId
   buildId: string
   gateway: NativeGateway
+  /** Handler list advertised to the Frame; defaults to the DOM adapter's registry. */
+  registeredActions?: readonly NativeAction[]
   onDestroy(): void
 }
 
@@ -30,6 +32,7 @@ export class FrameController {
   private readonly iframe: HTMLIFrameElement
   private readonly restoreButton: HTMLButtonElement
   private session: HostSession | null = null
+  private detachObserver: MutationObserver | null = null
   private connectTimer = 0
   private bootstrapId = ''
   private destroyed = false
@@ -44,7 +47,9 @@ export class FrameController {
 
     this.iframe = document.createElement('iframe')
     this.iframe.title = 'MMD HUD'
-    this.iframe.sandbox.add('allow-scripts', 'allow-downloads')
+    // setAttribute rather than sandbox.add(): same result, and jsdom (used by the
+    // host tests) does not implement the sandbox DOMTokenList.
+    this.iframe.setAttribute('sandbox', 'allow-scripts allow-downloads')
     this.iframe.allow = 'clipboard-write'
     this.iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;background:#050a0f;pointer-events:auto'
     this.iframe.addEventListener('load', this.handleLoad)
@@ -62,6 +67,12 @@ export class FrameController {
     if (this.destroyed) throw new Error('FrameController 已销毁')
     this.navigate()
     document.body.appendChild(this.element)
+    this.watchDetach()
+  }
+
+  /** True while the host element is still part of the document. */
+  isMounted(): boolean {
+    return !this.destroyed && this.element.isConnected
   }
 
   getFrameScriptUrl(): string {
@@ -90,6 +101,8 @@ export class FrameController {
   destroy = (): void => {
     if (this.destroyed) return
     this.destroyed = true
+    this.detachObserver?.disconnect()
+    this.detachObserver = null
     this.closeSession('destroy')
     this.iframe.removeEventListener('load', this.handleLoad)
     this.restoreButton.removeEventListener('click', this.show)
@@ -100,6 +113,21 @@ export class FrameController {
   close(reason: HostClosingReason): void {
     if (reason === 'destroy') this.destroy()
     else this.closeSession(reason)
+  }
+
+  /**
+   * Single-page hosts tear the chat view down without a pagehide: the element
+   * we appended to body gets removed by the page's own cleanup while the
+   * bridge observers, timers and the global instance would otherwise stay
+   * alive. Watching our own element lets the host page use plain DOM removal
+   * as the teardown signal, no cooperation required.
+   */
+  private watchDetach(): void {
+    if (this.detachObserver || typeof MutationObserver === 'undefined') return
+    this.detachObserver = new MutationObserver(() => {
+      if (!this.destroyed && !this.element.isConnected) this.destroy()
+    })
+    this.detachObserver.observe(document.body, { childList: true })
   }
 
   private navigate(): void {
@@ -147,7 +175,7 @@ export class FrameController {
       channelId,
       theme: this.options.theme,
       knownActions: ALL_NATIVE_ACTIONS,
-      registeredActions: REGISTERED_NATIVE_ACTIONS,
+      registeredActions: this.options.registeredActions ?? REGISTERED_NATIVE_ACTIONS,
     }
     this.iframe.contentWindow?.postMessage(handshake, '*', [channel.port2])
     this.connectTimer = window.setTimeout(() => {

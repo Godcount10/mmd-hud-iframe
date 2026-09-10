@@ -85,7 +85,7 @@ README
 
 无论开发哪个实例或基础设施层，都必须遵守：
 
-1. MMD 是消息、会话、模型、设置和原生面板的唯一真实状态源。
+1. MMD 是消息、会话、模型、设置和原生面板的唯一真实状态源；宿主頁面若透過 `__MMD_HUD_NATIVE_BRIDGE__` 提供自己的 Bridge，該頁面的狀態同樣是唯一真相源。
 2. selector、DOM reader、observer 和 action handler 只能运行在父页面。
 3. iframe Theme 不读取或操作 `window.parent.document`。
 4. Theme 不导入 `src/bridge/`、`src/host/` 或 transport 实现。

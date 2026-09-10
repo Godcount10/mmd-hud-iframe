@@ -51,8 +51,13 @@ function placeholder(index) {
   return `${RULE_PREFIX}${String(index).padStart(3, '0')}${RULE_SUFFIX}`
 }
 
+const INLINE_THEME = process.env.MMD_HUD_INLINE_THEME || 'bridge-debug'
+if (!['game', 'bridge-debug'].includes(INLINE_THEME)) {
+  throw new Error(`MMD_HUD_INLINE_THEME 只能是 game 或 bridge-debug，收到：${INLINE_THEME}`)
+}
+
 function startReplacement(buildId) {
-  const source = `<script>(()=>{const s=globalThis.${STATE_KEY};if(!s||!s.h||!s.f)throw new Error('MMD HUD inline bundle incomplete');globalThis.__MMD_HUD_IFRAME_CONFIG__={theme:'bridge-debug',frameScriptSource:s.f};const e=document.createElement('script');e.dataset.mmdHudInline='${buildId}';e.textContent=s.h;(document.head||document.documentElement).appendChild(e);})()</script>`
+  const source = `<script>(()=>{const s=globalThis.${STATE_KEY};if(!s||!s.h||!s.f)throw new Error('MMD HUD inline bundle incomplete');globalThis.__MMD_HUD_IFRAME_CONFIG__={theme:'${INLINE_THEME}',frameScriptSource:s.f};const e=document.createElement('script');e.dataset.mmdHudInline='${buildId}';e.textContent=s.h;(document.head||document.documentElement).appendChild(e);})()</script>`
   if (source.length > MAX_REPLACEMENT_LENGTH) throw new Error('内嵌启动片段超过字符限制')
   return source
 }
@@ -116,6 +121,7 @@ const placeholders = statusbar
 const manifest = {
   version: 1,
   buildId,
+  theme: INLINE_THEME,
   maxReplacementLength: MAX_REPLACEMENT_LENGTH,
   hostParts: result.hostCount,
   frameParts: result.frameCount,
