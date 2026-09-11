@@ -142,3 +142,33 @@ export const ACTION_DEBUG_MANIFEST = Object.fromEntries(
 ) as Record<NativeAction, ActionDebugDefinition>
 
 export const CONTRACT_ONLY_ACTIONS = Object.freeze([...CONTRACT_ONLY])
+
+/**
+ * The static manifest reflects the built-in DOM adapter's registry. When the
+ * connected Host provides its own bridge, its handshake reports a different set
+ * of registered actions; this reconciles a single action against that live set.
+ *
+ * The manifest still supplies label/group/effect/payload. Only the support
+ * status is authoritative from the handshake — and when a handler now exists for
+ * an action the built-in adapter left contract-only (stopGeneration and the
+ * other no-arg actions), its placeholder payloadKind becomes 'none' so the lab
+ * lets it run.
+ */
+export function resolveActionDefinition(
+  action: NativeAction,
+  registeredActions: ReadonlySet<NativeAction>,
+): ActionDebugDefinition {
+  const base = ACTION_DEBUG_MANIFEST[action]
+  const registered = registeredActions.has(action)
+  if (registered === (base.support === 'registered')) return base
+  return {
+    ...base,
+    support: registered ? 'registered' : 'contract-only',
+    payloadKind: registered
+      ? (base.payloadKind === 'contract-only' ? 'none' : base.payloadKind)
+      : 'contract-only',
+    description: registered
+      ? `通过 NativeBridge.invoke('${action}') 执行并验证原生结果。`
+      : '协议已声明，但当前没有原生 handler。',
+  }
+}

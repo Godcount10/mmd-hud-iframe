@@ -1,4 +1,5 @@
-import { ACTION_DEBUG_MANIFEST } from '../actionDebugManifest'
+import { ACTION_DEBUG_MANIFEST, resolveActionDefinition } from '../actionDebugManifest'
+import type { NativeAction } from '../../../../contracts'
 import { MAX_ACTION_RUNS } from './useActionExecutor'
 import { MAX_TIMELINE } from './useBridgeLab'
 import { MAX_SNAPSHOTS } from './useSnapshotHistory'
@@ -14,8 +15,13 @@ export function buildBridgeDebugExport(input: {
   droppedEvents: number
   droppedActionRuns: number
   full?: boolean
+  /** Live registry from the handshake; falls back to the static manifest when absent. */
+  registeredActions?: readonly NativeAction[]
 }): BridgeDebugExport {
-  const manifest = Object.values(ACTION_DEBUG_MANIFEST)
+  const registered = input.registeredActions ? new Set(input.registeredActions) : null
+  const manifest = Object.values(ACTION_DEBUG_MANIFEST).map((item) => (
+    registered ? resolveActionDefinition(item.action, registered) : item
+  ))
   const value: BridgeDebugExport = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),

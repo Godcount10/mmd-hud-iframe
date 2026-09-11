@@ -9,6 +9,10 @@ export const MAX_ACTION_RUNS = 200
 export function useActionExecutor(
   snapshot: Readonly<Ref<ChatSnapshot>>,
   invoke: <T = unknown>(action: NativeAction, payload?: unknown) => Promise<ActionResult<T>>,
+  // Whether the connected Host has a handler for an action. Defaults to the
+  // built-in static registry; a host-provided bridge passes its own live set so
+  // its extra handlers are not blocked as contract-only.
+  isRegistered: (action: NativeAction) => boolean = (action) => ACTION_DEBUG_MANIFEST[action].support === 'registered',
 ) {
   const actionRuns = ref<ActionRunRecord[]>([])
   const pending = ref(false)
@@ -32,8 +36,7 @@ export function useActionExecutor(
   }
 
   const execute = async <T = unknown>(action: NativeAction, payload?: unknown): Promise<ActionResult<T>> => {
-    const definition = ACTION_DEBUG_MANIFEST[action]
-    if (definition.support === 'contract-only') {
+    if (!isRegistered(action)) {
       return { ok: false, action, error: { code: 'NOT_AVAILABLE', message: '该动作只有协议声明，当前没有 handler。' } }
     }
     if (pending.value) {
