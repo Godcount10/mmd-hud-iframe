@@ -15,6 +15,8 @@ export interface HudConnectionState {
 export interface HudContext {
   snapshot: Readonly<Ref<ChatSnapshot>>
   connection: Readonly<Ref<HudConnectionState>>
+  /** Actions the connected Host reported a handler for (from the handshake). */
+  registeredActions: Readonly<Ref<readonly NativeAction[]>>
   invoke<A extends NativeAction, T = unknown>(action: A, payload?: NativeActionPayload<A>): Promise<ActionResult<T>>
   invokeDynamic<T = unknown>(action: NativeAction, payload?: unknown): Promise<ActionResult<T>>
   refresh(): Promise<ChatSnapshot>

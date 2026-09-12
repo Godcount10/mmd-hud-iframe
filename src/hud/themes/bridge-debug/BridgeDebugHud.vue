@@ -2,7 +2,7 @@
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { gsap } from 'gsap'
 import { ALL_NATIVE_ACTIONS, type ActionResult, type ModelOptionSnapshot, type NativeAction } from '../../../contracts'
-import { ACTION_DEBUG_MANIFEST } from './actionDebugManifest'
+import { ACTION_DEBUG_MANIFEST, resolveActionDefinition } from './actionDebugManifest'
 import { DEBUG_WORKFLOWS } from './workflowManifest'
 import { useBridgeLab } from './composables/useBridgeLab'
 import { useActionExecutor } from './composables/useActionExecutor'
@@ -23,7 +23,12 @@ import type { ModelBridgeAction } from './components/ModelQuickSwitcher.vue'
 
 const { context, events, droppedEvents, clearEvents } = useBridgeLab()
 const { snapshots, droppedSnapshots, clearSnapshots } = useSnapshotHistory(context.snapshot)
-const executor = useActionExecutor(context.snapshot, context.invokeDynamic)
+// Support status follows the connected Host's live registry (from the handshake),
+// not the built-in static manifest — a host-provided bridge can register actions
+// the DOM adapter leaves contract-only.
+const registeredSet = computed(() => new Set(context.registeredActions.value))
+const supportOf = (action: NativeAction) => resolveActionDefinition(action, registeredSet.value).support
+const executor = useActionExecutor(context.snapshot, context.invokeDynamic, (action) => registeredSet.value.has(action))
 const effects = useEffectSettings()
 
 type SurfaceMode = 'chat' | 'debug' | 'effects'
@@ -53,9 +58,9 @@ const fullExportConfirm = ref(false)
 const baseRevision = ref<number | null>(null)
 const targetRevision = ref<number | null>(null)
 
-const definition = computed(() => ACTION_DEBUG_MANIFEST[selectedAction.value])
-const registeredCount = Object.values(ACTION_DEBUG_MANIFEST).filter((item) => item.support === 'registered').length
-const contractOnlyCount = ALL_NATIVE_ACTIONS.length - registeredCount
+const definition = computed(() => resolveActionDefinition(selectedAction.value, registeredSet.value))
+const registeredCount = computed(() => ALL_NATIVE_ACTIONS.filter((action) => registeredSet.value.has(action)).length)
+const contractOnlyCount = computed(() => ALL_NATIVE_ACTIONS.length - registeredCount.value)
 const selectedCapability = computed(() => context.snapshot.value.capabilities[selectedAction.value])
 const groups = computed(() => ['全部', ...new Set(Object.values(ACTION_DEBUG_MANIFEST).map((item) => item.group))])
 const filteredActions = computed(() => ALL_NATIVE_ACTIONS.filter((action) => {
@@ -63,7 +68,7 @@ const filteredActions = computed(() => ALL_NATIVE_ACTIONS.filter((action) => {
   const capability = context.snapshot.value.capabilities[action]
   const matchesText = `${action} ${item.label} ${item.description}`.toLowerCase().includes(query.value.toLowerCase())
   const matchesGroup = group.value === '全部' || item.group === group.value
-  const matchesSupport = supportFilter.value === 'all' || item.support === supportFilter.value
+  const matchesSupport = supportFilter.value === 'all' || supportOf(action) === supportFilter.value
   const matchesAvailability = availabilityFilter.value === 'all'
     || (availabilityFilter.value === 'available' ? capability.available : !capability.available)
   return matchesText && matchesGroup && matchesSupport && matchesAvailability
@@ -281,6 +286,7 @@ async function confirmSafety(): Promise<void> {
 
 function exportLab(full = false): void {
   downloadBridgeDebugExport(buildBridgeDebugExport({
+    registeredActions: context.registeredActions.value,
     snapshots: snapshots.value,
     events: events.value,
     actionRuns: executor.actionRuns.value,
@@ -416,7 +422,7 @@ function exportLab(full = false): void {
               <strong>{{ ACTION_DEBUG_MANIFEST[action].label }}</strong>
               <small>{{ action }}</small>
             </span>
-            <span v-if="ACTION_DEBUG_MANIFEST[action].support === 'contract-only'" class="badge badge--muted">NO HANDLER</span>
+            <span v-if="supportOf(action) === 'contract-only'" class="badge badge--muted">NO HANDLER</span>
             <span v-else-if="ACTION_DEBUG_MANIFEST[action].effect === 'destructive'" class="badge badge--danger">DANGER</span>
           </button>
         </nav>

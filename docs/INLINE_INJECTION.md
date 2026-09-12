@@ -8,6 +8,7 @@
 
 ```bash
 MMD_HUD_BUILD_ID=inline-20260806 npm run build:inline
+# 預設載入 bridge-debug；正式 HUD 加 MMD_HUD_INLINE_THEME=game
 ```
 
 PowerShell：

@@ -1,7 +1,8 @@
-import type { ChatSnapshot } from '../contracts'
+import type { ChatSnapshot, NativeBridge } from '../contracts'
 import { MmdNativeBridge } from '../bridge/MmdNativeBridge'
 import { isHudThemeId, type HudThemeId } from '../protocol'
 import { FrameController } from './FrameController'
+import { resolveProvidedBridge } from './nativeBridgeProvider'
 
 export interface IframeHostConfig {
   frameScriptUrl?: string
@@ -18,10 +19,12 @@ export interface IframeHostApi {
   show(): void
   reloadFrame(): void
   destroy(): void
+  /** False once the page removed the host element; boot() replaces such an instance. */
+  isMounted(): boolean
 }
 
 export class HostApp {
-  private readonly bridge: MmdNativeBridge
+  private readonly bridge: NativeBridge
   private readonly frame: FrameController
   private destroyed = false
 
@@ -32,13 +35,17 @@ export class HostApp {
     private readonly buildId: string,
     private readonly onDestroy: () => void,
   ) {
-    this.bridge = new MmdNativeBridge(document)
+    // A host page that already owns an application-level state model can hand
+    // us a bridge built on it; DOM scraping is only the fallback for pages
+    // that expose nothing.
+    this.bridge = resolveProvidedBridge(window) ?? new MmdNativeBridge(document)
     this.frame = new FrameController({
       frameScriptUrl,
       frameScriptSource,
       theme,
       buildId,
       gateway: this.bridge,
+      registeredActions: this.bridge.getRegisteredActions?.(),
       onDestroy: () => this.destroyFromFrame(),
     })
   }
@@ -59,6 +66,7 @@ export class HostApp {
       show: this.frame.show,
       reloadFrame: this.frame.reloadFrame,
       destroy: this.destroy,
+      isMounted: () => this.frame.isMounted(),
     }
   }
 

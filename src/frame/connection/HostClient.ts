@@ -43,6 +43,7 @@ interface PendingRequest {
 export class HostClient {
   private readonly snapshotRef = shallowRef<ChatSnapshot>(createDisconnectedSnapshot())
   private readonly connectionRef = shallowRef<HostConnectionState>({ status: 'waiting-handshake', error: null })
+  private readonly registeredActionsRef = shallowRef<readonly NativeAction[]>([])
   private readonly listeners = new Set<(event: BridgeEvent) => void>()
   private readonly pending = new Map<string, PendingRequest>()
   private port: MessagePort | null = null
@@ -55,6 +56,10 @@ export class HostClient {
 
   readonly snapshot: Readonly<Ref<ChatSnapshot>> = shallowReadonly(this.snapshotRef)
   readonly connection: Readonly<Ref<HostConnectionState>> = shallowReadonly(this.connectionRef)
+  // The actions the connected Host actually has a handler for, taken from the
+  // handshake. A host-provided bridge reports its own set here, so debug tooling
+  // reflects that bridge instead of the built-in DOM adapter's static registry.
+  readonly registeredActions: Readonly<Ref<readonly NativeAction[]>> = shallowReadonly(this.registeredActionsRef)
 
   constructor(
     private readonly expectedParentOrigin: string,
@@ -85,6 +90,7 @@ export class HostClient {
 
     window.clearTimeout(this.connectTimer)
     this.handshake = handshake
+    this.registeredActionsRef.value = handshake.registeredActions
     this.port = nextPort
     this.connectionRef.value = { status: 'waiting-snapshot', error: null }
     this.port.onmessage = (portEvent: MessageEvent<unknown>) => this.handleHostMessage(portEvent.data)

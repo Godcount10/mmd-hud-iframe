@@ -41,6 +41,7 @@ if (!bootstrap || bootstrap.buildId !== __MMD_HUD_BUILD_ID__) {
     const context: HudContext = {
       snapshot: host.snapshot,
       connection: host.connection,
+      registeredActions: host.registeredActions,
       invoke: (action, payload) => host.invoke(action, payload),
       invokeDynamic: (action, payload) => host.invokeDynamic(action, payload),
       refresh: () => host.refresh(),

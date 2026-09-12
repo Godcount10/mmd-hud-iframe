@@ -528,4 +528,10 @@ export interface NativeBridge {
   subscribe(listener: BridgeListener): () => void
   invoke<T = unknown>(action: NativeAction, payload?: unknown): Promise<ActionResult<T>>
   sendMessage(text: string): Promise<ActionResult>
+  /**
+   * Actions this bridge has a real handler for. Reported to the Frame in the
+   * handshake so debug tooling can tell "contract only" from "not available
+   * right now". Omit to fall back to the built-in DOM adapter's registry.
+   */
+  getRegisteredActions?(): readonly NativeAction[]
 }
